@@ -1,0 +1,44 @@
+
+<section class="stats-strip"><div class="ticker"><span>400+ CAMPAIGNS <i>✦</i> 20+ FLOWS <i>✦</i> 60+ BRANDS <i>✦</i> 5.5% AVG SIGN-UP CVR <i>✦</i> $1M+ ATTRIBUTED REVENUE <i>✦</i></span><span>400+ CAMPAIGNS <i>✦</i> 20+ FLOWS <i>✦</i> 60+ BRANDS <i>✦</i> 5.5% AVG SIGN-UP CVR <i>✦</i> $1M+ ATTRIBUTED REVENUE <i>✦</i></span></div></section>
+<section class="work" id="work"><div class="section-head reveal"><div class="eyebrow">SELECTED EMAIL DESIGN</div><div><h2>THE WORK, AT A SIZE WORTH LOOKING AT.</h2><p>I rebuilt this section around the work itself: twenty selected emails, shown large, sharp and legible. Hover a row to pause it. Click any design to open the full email at reading size.</p></div></div>
+<div class="portfolio-band" id="portfolioBand"></div><div class="work-note"><span>HOVER A ROW TO PAUSE · CLICK ANY EMAIL TO OPEN IT FULL SIZE</span><span>20 SELECTED EMAILS · HIGH-RES SOURCE FILES</span></div></section>
+<div class="email-lightbox" id="emailLightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close email preview">×</button><div class="lightbox-panel"><img id="lightboxImage" alt="Full email design by Uzoma Ebuka"></div></div>
+<section class="services" id="services"><div class="services-top reveal"><div class="eyebrow">WHAT I DO</div><div><h2>GOOD DESIGN. BETTER RETENTION.</h2><p class="services-intro">I sit where visual design, lifecycle thinking and execution meet — which is a useful place to be when the brief needs to ship and perform.</p></div></div>
+<div class="service-list">
+<div class="service reveal"><span class="n">01</span><h3>Campaign Creative</h3><p>Conversion-minded email design with strong hierarchy, product storytelling and enough personality to earn the scroll.</p><b>↗</b></div>
+<div class="service reveal"><span class="n">02</span><h3>Lifecycle & Flow Design</h3><p>Winback, VIP, re-engagement and automated journey creative designed around where the customer actually is.</p><b>↗</b></div>
+<div class="service reveal"><span class="n">03</span><h3>Klaviyo Systems</h3><p>Flows, segmentation, sign-up forms, reusable modules and structures that make retention work faster and cleaner.</p><b>↗</b></div>
+<div class="service reveal"><span class="n">04</span><h3>Design Direction</h3><p>Figma libraries, modular templates, team workflows, creative QA and systems that keep output consistent without sanding off the good ideas.</p><b>↗</b></div>
+<div class="service reveal"><span class="n">05</span><h3>Web & UI/UX</h3><p>Conversion-focused interfaces, landing pages and design systems — the skillset I built before email became the main character.</p><b>↗</b></div>
+</div></section>
+<section class="numbers"><div class="numbers-head reveal"><h2>THE RECEIPTS.</h2><p>Numbers from the work so far. Context matters, but so does having something worth putting in a giant font.</p></div><div class="number-grid">
+<div class="number reveal"><span class="num" data-target="1" data-suffix="M+" data-prefix="$">$1M+</span><span>EMAIL-ATTRIBUTED CLIENT REVENUE CONTRIBUTED TO</span></div>
+<div class="number reveal"><span class="num" data-target="400" data-suffix="+">400+</span><span>EMAIL CAMPAIGNS DESIGNED & DEPLOYED</span></div>
+<div class="number reveal"><span class="num" data-target="60" data-suffix="+">60+</span><span>ECOMMERCE BRANDS COLLABORATED WITH</span></div>
+<div class="number reveal"><span class="num" data-target="20" data-suffix="+">20+</span><span>AUTOMATED FLOWS DESIGNED</span></div>
+<div class="number reveal"><span class="num" data-target="5.5" data-suffix="%">5.5%</span><span>AVERAGE SIGN-UP FORM CONVERSION RATE</span></div>
+</div></section>
+<section class="about" id="about"><div class="about-grid"><div class="reveal"><div class="eyebrow">ABOUT</div><h2>DESIGNER FIRST.</h2></div><div><p class="about-copy reveal">I’ve spent 5+ years moving between email, web, UI and design systems. Today, I lead email design work for ecommerce brands — blending <em>creative taste with retention thinking</em>, and building systems that help good work happen more often.</p>
+<div class="timeline" id="experience">
+<div class="job reveal"><span>2023—NOW</span><strong>PROJECT GROWTH MARKETING</strong><span>Design Lead & Email Graphic Designer</span></div>
+<div class="job reveal"><span>2022—2023</span><strong>JERSEY D’OR</strong><span>Email Designer</span></div>
+<div class="job reveal"><span>2023</span><strong>BRAINTRUST</strong><span>Web Designer</span></div>
+<div class="job reveal"><span>2022—2023</span><strong>HEADEN FINANCE</strong><span>UI/UX Designer</span></div>
+<div class="job reveal"><span>2022</span><strong>QONNECTUS AB</strong><span>UI/Web Designer</span></div>
+<div class="job reveal"><span>2018—2022</span><strong>DIGITAL FIGURES</strong><span>Graphic, Social & UI Designer</span></div>
+</div><div class="tools reveal"><span class="tool">FIGMA</span><span class="tool">KLAVIYO</span><span class="tool">ADOBE PHOTOSHOP</span><span class="tool">LITMUS</span><span class="tool">OPTIMONK</span><span class="tool">NOTION</span><span class="tool">CLICKUP</span><span class="tool">AI WORKFLOWS</span></div></div></div></section>
+<section class="cta"><div class="eyebrow"><span>OPEN TO THE RIGHT FIT</span><span>FREELANCE · AGENCY · FULL-TIME</span></div><h2>GOT A GOOD BRIEF? SEND THE INTERESTING ONES.</h2><div><div class="cta-copy"><p>Freelance project, agency collaboration or a full-time seat — if the work involves making email look sharper and work harder, I’m interested.</p><div class="cta-actions"><a class="pill primary" href="resume.html" target="_blank">VIEW RESUME ↗</a><a class="pill" href="#top">BACK TO TOP ↑</a></div></div><footer><span>UZOMA EBUKA © 2026</span><span>EMAIL DESIGN / KLAVIYO / RETENTION / UI</span><span>BUILT TO GET OPENED.</span></footer></div></section>
+</main>
+<script>
+const selectedEmails=Array.from({length:20},(_,i)=>`email-${String(i+1).padStart(2,'0')}.webp`);
+const firstRow=selectedEmails.slice(0,10), secondRow=selectedEmails.slice(10,20);
+const portfolioBand=document.getElementById('portfolioBand');
+function tile(file,i){const eager=i<4?'eager':'lazy';return `<article class="email-tile" tabindex="0" data-file="${file}" data-cursor="OPEN"><img loading="${eager}" decoding="async" src="${window.__EMAIL_ASSETS[file]}" alt="Selected email design ${i+1} by Uzoma Ebuka"><span class="view-tag">VIEW FULL EMAIL ↗</span></article>`}
+function marquee(files,reverse=false){const row=document.createElement('div');row.className='email-marquee'+(reverse?' reverse':'');const track=document.createElement('div');track.className='email-track';const doubled=[...files,...files];track.innerHTML=doubled.map((f,i)=>tile(f,i%files.length)).join('');row.appendChild(track);return row}
+portfolioBand.appendChild(marquee(firstRow,false));portfolioBand.appendChild(marquee(secondRow,true));
+const lightbox=document.getElementById('emailLightbox'),lightboxImage=document.getElementById('lightboxImage');
+function openEmail(file){lightboxImage.src=window.__EMAIL_ASSETS[file];lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+function closeEmail(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lightboxImage.removeAttribute('src');document.body.style.overflow=''}
+document.addEventListener('click',e=>{const card=e.target.closest('.email-tile');if(card)openEmail(card.dataset.file);if(e.target.classList.contains('email-lightbox')||e.target.classList.contains('lightbox-close'))closeEmail()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeEmail();const card=e.target.closest&&e.target.closest('.email-tile');if(card&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openEmail(card.dataset.file)}});
+function cycle(sel,delay=2400,offset=0){const box=document.querySelector(sel),imgs=[...box.querySelectorAll('img')];let i=0;setTimeout(()=>setInterval(()=>{imgs[i].classList.remove('active');i=(i+1)%imgs.length;imgs[i].classList.add('active')},delay),offset)}cyc
