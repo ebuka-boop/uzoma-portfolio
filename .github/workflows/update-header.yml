@@ -1,0 +1,37 @@
+name: Update portfolio header
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-header.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-header:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply requested header changes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text()
+
+          s = s.replace('<a class="brand" href="#top"><b>UE</b> UZOMA EBUKA</a>', '<a class="brand" href="#top">TESEN</a>')
+          s = s.replace('<a class="hire" href="Uzoma_Ebuka_Resume.pdf" target="_blank"><span>VIEW RESUME</span><b>↗</b></a>', '<a class="hire" href="mailto:exxeldesigns@gmail.com"><span>LET\'S TALK</span><b>↗</b></a>')
+          s = s.replace('.hire{justify-self:end;border:1px solid currentColor;border-radius:999px;padding:11px 15px;font-size:9px;font-weight:800;display:flex;gap:18px}.hire:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}', '.hire{justify-self:end;border:1px solid var(--lime);border-radius:999px;padding:22px 30px;font-size:10px;font-weight:800;display:flex;gap:18px;background:var(--lime);color:var(--ink)}.hire:hover{background:transparent;color:#fff;border-color:#fff}')
+          s = s.replace('.hire{padding:9px 12px}', '.hire{padding:18px 24px}')
+
+          p.write_text(s)
+          PY
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m 'Update header brand and contact CTA'
+          git push
